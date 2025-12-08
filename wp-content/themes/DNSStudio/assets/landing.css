@@ -1,0 +1,170 @@
+body{
+   margin: none;
+   overflow-x: hidden;
+
+}
+
+main{
+display: block;
+ }
+ section{
+    padding: 0px;
+ }
+ .hero{
+    display: flex; 
+    flex-direction: column;
+    height: 100%;
+    max-height: 100vh;
+ }
+ .hero h1{
+    font-size: 300px;
+    margin: 0px;
+ }
+  @media only screen and (max-width: 600px) {
+    .hero h1{
+      font-size: 3000px;
+      margin: 0px;
+      background-color: aqua;
+  }
+  }
+ .hero h2{
+    font-size: 128px;
+    display: flex;
+    justify-content: end;
+    margin: 0px;
+ }
+ .hero span{
+   color: var(--MainRed2)
+ }
+ 
+ .About{
+   width: 100vw;
+   background-color: var(--Black);
+   display:flex;
+   height: 500px;
+   max-height: 500px;
+ }
+ .AContent{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;   
+   color: var(--White);
+   width: 100%;
+   padding: 0px 128px;
+ }
+ #AboutParagragh p{
+   font-size: 16px ;
+   font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
+   line-height: 200%;
+ }
+ span{
+   color: var(--MainRed2);
+ }
+
+ @keyframes Revolve{
+   from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+
+ }
+ @keyframes RevolveOposite{
+   from { transform: translateX(0); }
+   to   { transform: translateX(-100%); }
+
+ }
+
+ .services{
+   width: 100vw;
+   height: 100vh;
+   max-height: 1000px;
+   display: flex;
+   flex-direction: column;
+   scroll-behavior: smooth;
+ }
+ .services p{
+   text-align: center;
+ }
+ #RevolvingText{
+   display: flex;
+   flex-direction: column;
+   padding: 0px;
+   transform:rotate(5deg);
+
+ }
+ #Line1 {
+
+   animation:Revolve 20s infinite linear ;
+   will-change: transform;
+   white-space: nowrap;
+   animation-play-state: running;
+
+ }
+ #Line1:hover{
+
+   animation-play-state: paused;
+ }
+ #Line2{
+   animation:RevolveOposite 20s infinite linear reverse ;
+   will-change: transform; 
+ }
+ #Line2:hover{
+
+   animation-play-state: paused;
+ }
+#Line1 h1{
+   width: 300%;
+}
+#Line2 h1{
+   width: 300%;
+}
+
+/*Work Page*/
+
+@keyframes FadeIn {
+  from{transform: translatey(200px); ; opacity: 0%; color:var(--Black); };
+  to{transform: translatey(0); opacity: 100%; };
+}
+@keyframes ColorChange {
+  0%{color: var(--Accent1);}
+  16.6%{color: var(--MainRed);}
+  33.3%{color: var(--MainRed2);}
+  66%{color: var(--MainBlue);}
+}
+.WLanding{
+  width: 100%;
+  height: 70vh;;
+}
+#WHero{
+  justify-content: center;
+  text-align: center;
+  font-size: 128px;
+  animation: FadeIn .4s linear;
+  color:var(--Black);
+}
+#Subtext{
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  animation: ColorChange 2s steps(1, end)  ;
+}
+#Subtext  strong{
+  color: var(--MainRed2);
+}
+.groupCircles{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 28px;
+
+}
+.Circle{
+  width:25vw;
+  height: 25vh;
+  max-height: 141px;
+  max-width: 141px;
+  background-color: aliceblue;
+  margin: 0 34px;
+  border-radius: 100%;
+
+}
+

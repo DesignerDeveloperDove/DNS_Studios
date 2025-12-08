@@ -1,0 +1,101 @@
+/*
+Theme Name: DNSStudio
+Author: Nashion Dove 
+Version: 1.0
+Author URI:  Https://developerdove.com
+Description: This is a custom wordpress theme developed by Nashion Dove and designed by Nashion Dove and Scott Rsaza.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Special+Gothic+Expanded+One&display=swap');
+
+body {
+    font-family: 'EB Garamond', 'inter' , sans-serif;;
+    color: var(--Accent2);
+    background-color: var(--White);
+    margin: 0px;
+
+  }
+  :root {
+    --MainBlue: #91A6FF; /* Primary*/
+    --MainRed: #DB162F; /* Secondary */
+    --MainRed2: #E96F7E;/*lighter Red
+    --MainPink:#FFDFE0;/* Tertiary */
+    --Accent1:#FAED8F; /* Accent Yellow */
+    --Accent2:#241717;/* Accent brown/blackish */
+    --White:#fdfdfd;/*slight off white*/
+    --Black:#1d1b1b;/* User friendly black*/
+  }
+  h1{
+    font-size: 96px;
+    font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
+  }
+  h2{
+    font-size: 70px;
+    font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
+  }
+ 
+  h4{
+    font-size: 20px;
+    font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
+  }
+  p{
+    font-size: 36px;
+    font-family: 'EB Garamond', 'inter' , serif;
+  }
+  nav{
+    display: flex;
+    margin: none 32px;
+    width:auto;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+  }
+
+  #logo h2{
+    font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
+    font-size: 46px;
+    justify-content: start;
+    padding: 0px 24px;
+    vertical-align: center;
+
+    
+  }
+  ul{
+    display: flex;
+    font-size: 32px;
+    justify-content: end;
+
+
+  }
+  li{
+    padding: 0px 24px;
+    list-style: none;
+    vertical-align: center;
+ }
+ .landing .hero{
+  margin-left: 0px;
+ }
+ section{
+  margin-left: 0px;
+ }
+a{
+  text-decoration: none;
+  color: var(--Black);
+}
+@keyframes blinker{
+  0%{color: var(--Black);}
+  
+  50%{color: var(--MainRed2);font-weight: 500; }
+  100%{color: var(--Black);}
+
+
+}
+a:hover{
+  animation: ColorChange 2s steps(1) infinite  ;
+  font-weight: 500;
+
+}
+ /* This is all the CSS for the Nav Bar */
+ /* This is all the CSS for the main content */
+
