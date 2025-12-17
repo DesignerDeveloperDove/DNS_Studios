@@ -108,17 +108,21 @@ a:hover{
 
  
 .Work{
+  box-sizing: border-box;
   width: 90%;
   display: inline-grid;
-  grid-template-columns:auto auto auto;
   gap: 30px;
   margin: 5%;
+  grid-template-columns: 500px  auto auto ;
 
+    @media (min-width: 600px) {
+      grid-template-columns: 500px  auto  ;
 
-  
+    }
+
 }
+
 #Project{
-  background-color: #e96f7d;
   border-radius: 30px;
   box-shadow: 2px 4px 14px var(--Black);
   justify-content: center;
