@@ -115,12 +115,16 @@ a:hover{
   margin: 5%;
   grid-template-columns: 500px  auto auto ;
 
-    @media (min-width: 600px) {
-      grid-template-columns: 500px  auto  ;
 
-    }
 
 }
+@media screen and (min-width: 380px) and (max-width: 768px) {
+  .Work {
+    grid-template-columns: 500px auto;
+  }
+}
+
+  
 
 #Project{
   border-radius: 30px;
