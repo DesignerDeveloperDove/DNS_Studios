@@ -41,33 +41,6 @@ function mytheme_enqueue_assets() {
         wp_get_theme()->get('Version')
     );
 
-    // Landing page styles & scripts (only on homepage)
-    if ( is_front_page() ) {
-        wp_enqueue_style(
-            'front-page-style',
-            get_stylesheet_directory_uri() . '/assets/landing.css',
-            array(),
-            filemtime(get_stylesheet_directory() . '/assets/landing.css')
-        );
-    }
-    
-    // Separate condition for the "Work" page
-    if ( is_page('work') ) {
-        wp_enqueue_style(
-            'work-page-style',
-            get_stylesheet_directory_uri() . '/assets/landing.css',
-            array(),
-            filemtime(get_stylesheet_directory() . '/assets/landing.css')
-        );
-    }
-
-        wp_enqueue_script(
-            'front-page-script',
-            get_stylesheet_directory_uri() . '/assets/landing.js',
-            array('jquery'), // optional dependencies
-            filemtime(get_stylesheet_directory() . '/assets/landing.js'),
-            true
-        );
     }
 
 add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_assets' );

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<meta name="viewport">
   <meta charset="<?php bloginfo('charset'); ?>">
   <title><?php bloginfo('name'); ?></title>
   <?php wp_head(); ?>
+  
 
 </head>
 <nav class="navbar">
