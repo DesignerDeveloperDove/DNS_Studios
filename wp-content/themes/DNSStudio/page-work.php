@@ -31,8 +31,7 @@ wp_head();
         </div>
         <p>We are adore  each and every one of the businesses we’ve worked with </p>
       </div>
-    </section>
-    <section id="Work">
+    
 
     </section>
 </body>
