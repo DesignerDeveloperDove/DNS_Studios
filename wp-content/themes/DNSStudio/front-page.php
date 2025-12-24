@@ -46,30 +46,42 @@ get_header();
     </div>
   </section>
   </section>
+  <div id="Work"> 
+  <h1 >WORK</h1>
+
+
+  </div>
     <section class="Work">
-          <div id="Project">
-              <h1>Test</h1>
+          <div id="Box1">
+              <h1  >Test1</h1>
           </div>
 
-          <div id="Project">
-              <h1>Test</h1>
+          <div id="Box2">
+              <h1 >Test2</h1>
           </div>
 
-          <div id="Project">
-              <h1>Test</h1>
+          <div id="Box3">
+              <h1 >Test3</h1>
           </div>
 
-          <div id="Project">
-              <h1>Test</h1>
+          <div id="Box4">
+              <h1 >Test4</h1>
           </div>
           
-          <div id="Project">
-              <h1>Test</h1>
+          <div id="Box5">
+              <h1 >Test5</h1>
           </div>
 
-          <div id="Project">
-              <h1>Test</h1>
+          <div id="Box6">
+              <h1 >Test6</h1>
           </div>
+          <div id= "Box7">
+              <h1>Test7</h1>
+            </div>
+          <div class="Project">
+            
+          </div>
+          
     </section>
 
 </main>

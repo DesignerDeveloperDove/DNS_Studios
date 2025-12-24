@@ -22,13 +22,16 @@ body ,html{
   :root {
     --MainBlue: #91A6FF; /* Primary*/
     --MainRed: #DB162F; /* Secondary */
-    --MainRed2: #E96F7E;/*lighter Red
+    --MainRed2: #E96F7E;/*lighter Red*/
     --MainPink:#FFDFE0;/* Tertiary */
     --Accent1:#FAED8F; /* Accent Yellow */
     --Accent2:#241717;/* Accent brown/blackish */
     --White:#fdfdfd;/*slight off white*/
     --Black:#1d1b1b;/* User friendly black*/
+    --DNSGradient: linear-gradient(135deg, var(--Accent1), var(--MainRed2), var(--MainBlue)); /* Gradient*/
   }
+
+
   h1{
     font-size: 96px;
     font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
@@ -109,28 +112,54 @@ a:hover{
  
 .Work{
   box-sizing: border-box;
-  width: 90%;
+  max-width: 90vw;
   display: inline-grid;
   gap: 30px;
   margin: 5%;
-  grid-template-columns: 500px  auto auto ;
-
-
-
-}
-@media screen and (min-width: 380px) and (max-width: 768px) {
-  .Work {
-    grid-template-columns: 500px auto;
-  }
-}
-
+  grid-template-columns: repeat(3, 1fr);
   
+}
 
-#Project{
+
+  #Work h1{
+    background: var(--DNSGradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.Work h1{
   border-radius: 30px;
   box-shadow: 2px 4px 14px var(--Black);
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
+
+#Box7 {
+  grid-area: 3 / 1 / span 3 / span 3;
+  
+}
+#Box5 {
+  grid-area: 2 / 2 / span 1 / span 2;
+  max-width: 66%  ;
+  
+}
+
+
+
+/*Mobile*/
+
+
+
+
+
+
+
+/*
+Box 7 will start on row 2 and column 1, and span 2 rows and 3 columns:
+
+*/
+
 
 
 main{
@@ -149,20 +178,11 @@ section{
    max-height: 100vh;
 }
 .hero h1{
-   font-size: 300px;
+   font-size: 25vw;
    margin: 0px;
 }
- @media only screen and (max-width: 600px) {
-   .hero h1{
-     font-size: 3000px;
-     margin: 0px;
-     background-color: aqua;
-     width: 100vw;
-
- }
- }
 .hero h2{
-   font-size: 128px;
+   font-size: 10vw;
    display: flex;
    justify-content: end;
    margin: 0px;
@@ -175,8 +195,8 @@ section{
   width: 100vw;
   background-color: var(--Black);
   display:flex;
-  height: 500px;
-  max-height: 500px;
+  height: 100%;
+  max-height: 900px ;
 }
 .AContent{
   display: flex;
@@ -217,20 +237,22 @@ span{
 }
 .services p{
   text-align: center;
+  
 }
 #RevolvingText{
   display: flex;
   flex-direction: column;
   padding: 0px;
   transform:rotate(5deg);
-
+  
 }
 #Line1 {
-
   animation:Revolve 20s infinite linear ;
   will-change: transform;
   white-space: nowrap;
   animation-play-state: running;
+
+  
 
 }
 #Line1:hover{
@@ -240,16 +262,24 @@ span{
 #Line2{
   animation:RevolveOposite 20s infinite linear reverse ;
   will-change: transform; 
+  
 }
 #Line2:hover{
 
   animation-play-state: paused;
 }
 #Line1 h1{
-  width: 300%;
+  display: inline-block;
+  white-space: nowrap;
+  background: var(--DNSGradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #Line2 h1{
   width: 300%;
+  background: var(--DNSGradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*Work Page*/
@@ -302,3 +332,89 @@ span{
 
 }
 
+
+
+/*ALL MOBILE SCREEN SHIT*/
+
+@media only screen and (max-width: 600px) {
+  .hero{
+   height: 90vh;
+   display: flex;
+   text-align: center;
+   margin-top: 20%;
+  }
+ .hero h1{
+    margin: 0px;
+    width: 100vw;
+}
+.hero h2{
+ display: flex;
+justify-content: center !important;
+}
+
+/*About*/
+
+
+.About{
+  width: 100vw;
+  background-color: var(--Black);
+  display:flex;
+  height: 100vh;
+}
+.AContent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;   
+  color: var(--White);
+  width: 100%;
+  padding: 2%;
+  max-height: 100%;
+}
+#AboutParagragh p{
+  font-size: 16px ;
+  font-family: 'Special Gothic Expanded One', 'inter' ,sans-serif;
+  line-height: 150%;
+}
+span{
+  color: var(--MainRed2);
+}
+
+
+/*Services*/
+.services #Line2 h1{
+  font-size: 50px;
+}
+
+/*grid*/
+
+.Work{
+  box-sizing: border-box;
+  max-width: 90vw;
+  display: inline-grid;
+  gap: 10px;
+  margin: 2%;
+  grid-template-columns: repeat(1, 1fr);
+  
+}
+
+
+  
+
+.Work h1{
+  border-radius: 30px;
+  box-shadow: 2px 4px 14px var(--Black);
+  justify-content: center;
+  height: 100%;
+}
+
+#Box7 {
+  grid-area: 3 / 1 / span 3 / span 3;
+  
+}
+#Box5 {
+  grid-area: 2 / 2 / span 1 / span 2;
+  max-width: 66%  ;
+  
+}
+}
